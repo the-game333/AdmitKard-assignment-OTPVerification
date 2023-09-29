@@ -1,8 +1,8 @@
 import { BsFillShieldLockFill, BsTelephoneFill } from "react-icons/bs";
 import { CgSpinner } from "react-icons/cg";
-import logo from "./logo.png"
-import twologo from "./twologo.png"
-import thirdlogo from "./thirdlogo.png"
+import logo from "./images/logo.png"
+import twologo from "./images/twologo.png"
+import thirdlogo from "./images/thirdlogo.png"
 import OtpInput from "otp-input-react";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
@@ -103,6 +103,9 @@ const App = () => {
         ) : (
           <div className="w-80 flex flex-col gap-4 rounded-lg p-4" style={{height:"100%",marginTop:"15%"}}>
             
+
+            { /* If there is OTP, show below code otherwise the code after colon */ }
+
             {showOTP ? (
               <>
                 <div className="flex items-center justify-center">
@@ -137,9 +140,9 @@ const App = () => {
               </>
             ) : (
               <>
-                {/* <div className="bg-white text-emerald-500 w-fit mx-auto p-4 rounded-full">
-                  <BsTelephoneFill size={30} />
-                </div> */}
+
+                {/* This is the beginning page component that you will see  */}
+
                 <img src={logo} alt="BigCo Inc. logo"/>
             <h1 className="text-center leading-normal text-slate-700 font-medium text-2xl" style={{marginTop:"25px"}}>
               Welcome Back
