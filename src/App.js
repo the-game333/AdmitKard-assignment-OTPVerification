@@ -86,6 +86,9 @@ const App = () => {
       <div>
         <Toaster toastOptions={{ duration: 4000 }} />
         <div id="recaptcha-container"></div>
+
+                {/* This is the last page, show this when OTP is verified and user is set */}
+
         {user ? (
           <div className="w-80 flex flex-col gap-2 rounded-lg p-4" style={{height:"100%",marginTop:"5%"}}>
             <img src={thirdlogo} alt="BigCo Inc. logo" style={{height:"260px",width:"100%"}}/>
@@ -101,10 +104,12 @@ const App = () => {
                 <p className="text-center text-sm text-slate-500">*This will only take 5 mins.</p>
           </div>
         ) : (
+
+
           <div className="w-80 flex flex-col gap-4 rounded-lg p-4" style={{height:"100%",marginTop:"15%"}}>
             
 
-            { /* If there is OTP, show below code otherwise the code after colon */ }
+            { /* If there is OTP, show below component otherwise the other component */ }
 
             {showOTP ? (
               <>
@@ -141,7 +146,7 @@ const App = () => {
             ) : (
               <>
 
-                {/* This is the beginning page component that you will see  */}
+                {/* This is the first page component that you will see  */}
 
                 <img src={logo} alt="BigCo Inc. logo"/>
             <h1 className="text-center leading-normal text-slate-700 font-medium text-2xl" style={{marginTop:"25px"}}>
